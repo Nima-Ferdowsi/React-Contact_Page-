@@ -1,0 +1,202 @@
+body {
+  background-color: #22304f;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+.container {
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.col-lg-6 {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.col-lg-6 {
+  flex: 0 0 33.333333%;
+  max-width: 33.333333%;
+  max-width: 50%;
+}
+
+form {
+  width: 50vw;
+  height: 100vh;
+  position: relative;
+  float: left;
+  left: 40vw;
+  margin-top: -2vw;
+}
+
+form h1 {
+  color: white;
+  font-size: 48px;
+  font-weight: 600;
+  text-align: center;
+}
+
+form .form-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+form .form-group {
+  margin-top: 2vw;
+}
+
+form .form-control {
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+form .form-control:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+form select {
+  width: 110% !important;
+  padding: .485rem 0.75rem !important;
+}
+
+form #rfs-btn {
+  background-color: white;
+  margin-top: 0px;
+  position: relative;
+}
+
+form .comment {
+  margin-left: 2vw;
+  display: flex;
+  flex-direction: column;
+}
+
+form textarea {
+  resize: none;
+  width: 42vw !important;
+  height: 15vh;
+}
+
+form button {
+  cursor: pointer;
+  position: absolute;
+  background-color: #de3c4b;
+  border: none;
+  color: white;
+  padding: 20px 37px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  right: 3vw;
+  margin-top: 2vw;
+  margin-left: 50px;
+  border-radius: 5px;
+}
+
+form button:disabled {
+  background-color: #f0a9b0;
+}
+
+form .privacy {
+  width: 20vw;
+  position: absolute;
+  left: 4vw;
+  margin-top: 2.8vw;
+  display: flex;
+  flex-direction: row;
+}
+
+form .privacy span {
+  color: #de3c4b;
+}
+
+.info {
+  position: fixed;
+  margin-left: 15vw;
+  top: 40%;
+  transform: translateY(-40%);
+}
+
+.info h5 {
+  font-size: 25px;
+  color: white;
+}
+
+.info a {
+  cursor: pointer;
+  color: #de3c4b;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+@media only screen and (max-width: 870px) {
+  body {
+    overflow-y: hidden;
+  }
+  label {
+    margin-left: 4vw;
+  }
+  .info {
+    display: none;
+  }
+  form {
+    overflow-x: hidden;
+    width: 100vw;
+    position: relative;
+    left: -3vw;
+  }
+  form .form-container {
+    display: flex;
+    flex-direction: column;
+  }
+  form .form-group {
+    margin-top: 8vw;
+  }
+  form .form-control {
+    width: 90vw;
+  }
+  form .comment label {
+    margin-left: 6vw;
+  }
+  form textarea {
+    width: 90vw !important;
+  }
+  form .privacy {
+    width: 50vw;
+  }
+  form select {
+    width: 93.2vw !important;
+  }
+  form #rfs-btn {
+    width: 92vw;
+    right: 45px;
+  }
+}
+/*# sourceMappingURL=App.css.map */

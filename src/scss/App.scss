@@ -1,0 +1,194 @@
+$bg: #22304f;
+$primary: #de3c4b;
+
+@mixin displayflex($type: row) {
+  display: flex;
+  flex-direction: $type;
+}
+body {
+  background-color: $bg;
+  width: 100%;
+  overflow-x: hidden;
+}
+label {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  color: white;
+}
+.container {
+  width: 100%;
+}
+.row {
+  @include displayflex(row);
+}
+.col-lg-6 {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.col-lg-6 {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 50%;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 33.333333%;
+  flex: 0 0 33.333333%;
+  max-width: 33.333333%;
+  max-width: 50%;
+}
+
+form {
+  width: 50vw;
+  height: 100vh;
+  position: relative;
+  float: left;
+  left: 40vw;
+  margin-top: -2vw;
+  h1 {
+    color: white;
+    font-size: 48px;
+    font-weight: 600;
+    text-align: center;
+  }
+  .form-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .form-group {
+    margin-top: 2vw;
+  }
+
+  .form-control {
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+  .form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  }
+ select{
+   width: 110% !important;
+   padding: .485rem 0.75rem !important;
+  }
+#rfs-btn{
+  background-color: white;
+  margin-top: 0px;
+  position: relative;
+}
+  .comment {
+      margin-left: 2vw;
+    @include displayflex(column);
+  }
+  textarea {
+    resize: none;
+    width: 42vw !important;
+    height: 15vh;
+  }
+  button {
+    cursor: pointer;
+    position: absolute;
+    background-color: $primary;
+    border: none;
+    color: white;
+    padding: 20px 37px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    right: 3vw;
+    margin-top: 2vw;
+    margin-left: 50px;
+    border-radius: 5px;
+  }
+  button:disabled{
+    background-color: lighten($color: $primary, $amount: 25);
+  }
+  .privacy {
+    width: 20vw;
+    position: absolute;
+    left: 4vw;
+    margin-top: 2.8vw;
+    @include displayflex(row);
+    span {
+      color: $primary;
+    }
+  }
+}
+.info {
+  position: fixed;
+  margin-left: 15vw;
+  top: 40%;
+  transform: translateY(-40%);
+}
+.info h5 {
+  font-size: 25px;
+  color: white;
+}
+.info a {
+  cursor: pointer;
+  color: $primary;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+@media only screen and (max-width: 870px) {
+  body{
+    overflow-y: hidden;
+  }
+  label{
+        margin-left: 4vw;
+    }
+  .info {
+    display: none;
+  }
+
+  form {
+    overflow-x: hidden;
+    width: 100vw;
+    position: relative;
+    left: -3vw; 
+    .form-container {
+      @include displayflex(column);
+    }
+    .form-group {
+      margin-top: 8vw;
+    }
+
+    .form-control {
+      width: 90vw; 
+    }
+   .comment label{
+       margin-left: 6vw;
+   }
+    textarea {
+    
+      width: 90vw !important;
+    }
+  
+    
+    .privacy {
+      width: 50vw;    
+    }
+    select{
+      width: 93.2vw !important;
+    }
+    
+    #rfs-btn{
+      width: 92vw;
+      right:45px;
+    }
+  }
+}
