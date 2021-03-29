@@ -8,7 +8,7 @@ const Contact = ({ children }) => {
   const [job, setJob] = useState("");
   const [company, setCompany] = useState("");
   const [industry, setIndustry] = useState("");
-  const [country, setCountry] = useState("US");
+  const [country, setCountry] = useState("");
   const [geography, setGeography] = useState("");
   const [comment, setComment] = useState("");
   /*did he accept the policy or not */
@@ -23,7 +23,7 @@ const Contact = ({ children }) => {
   };
   const handleEmail = (e) => {
     setemail(e.target.value);
-    console.log(email);
+    console.log(country);
   };
   const handleJob = (e) => {
     setJob(e.target.value);
@@ -79,13 +79,10 @@ const Contact = ({ children }) => {
 /*   return true and false base on if all states get filled or not*/ 
    const isFormValid =
     firstName &&
-    lastName &&
     email &&
-    job &&
     company &&
     industry &&
-    company &&
-    geography &&
+    country &&
     comment &&
     policy;
     /*put all states and functions in object to pass them easily in context.provider*/

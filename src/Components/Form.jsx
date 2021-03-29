@@ -38,7 +38,7 @@ const Form = () => {
       <h1>CONTACT US</h1>
       <div className="form-container">
         <div className="form-group col-lg-6">
-          <label for="firstName">First Name</label>
+          <label for="firstName">First Name*</label>
           <input
             type="text"
             name="firstName"
@@ -62,7 +62,7 @@ const Form = () => {
           />
         </div>
         <div className="form-group col-lg-6">
-          <label for="email">Email </label>
+          <label for="email">Email* </label>
           <input
             type="email"
             name="email"
@@ -86,7 +86,7 @@ const Form = () => {
           />
         </div>
         <div className="form-group col-lg-6">
-          <label for="company">Company</label>
+          <label for="company">Company*</label>
           <input
             type="text"
             name="company"
@@ -98,7 +98,7 @@ const Form = () => {
           />
         </div>
         <div className="form-group col-lg-6">
-          <label for="industry">Industry</label>
+          <label for="industry">Industry*</label>
           <select
             name="industry"
             className="form-control"
@@ -111,7 +111,7 @@ const Form = () => {
           </select>
         </div>
         <div className="form-group col-lg-6">
-          <label for="Countrty">Countrty</label>
+          <label for="Countrty">Countrty*</label>
 
           <ReactFlagsSelect
             onSelect={(code) => handleCountry(code)}
@@ -142,7 +142,7 @@ const Form = () => {
           </select>
         </div>
         <div className="form-group comment">
-          <label for="comment">Comment</label>
+          <label for="comment">Comment*</label>
           <textarea
             name="comment"
             className="form-control"
@@ -154,17 +154,26 @@ const Form = () => {
         </div>
       </div>
       <div className="privacy">
-        <input
-          type="checkbox"
-          name="privacy"
-          checked={policy}
-          onChange={handlePolicy}
-        />
-        <label for="privacy">
-          By submitting this form I accept{" "}
-          <span>privacy policy and cookie policy.</span>
-        </label>
+        <div className="privacy-items">
+          <input
+            type="checkbox"
+            name="privacy"
+            checked={policy}
+            onChange={handlePolicy}
+          />
+          <label for="privacy">
+            By submitting this form I accept{" "}
+            <span>privacy policy and cookie policy.</span>
+          </label>
+        </div>
+        <div className="privacy-items">
+          <input type="checkbox" name="news" />
+          <label for="news">
+I would like to receive your newsletter.</label>
+        </div>
       </div>
+
+      <div className="news"></div>
       <button disabled={!isFormValid}>Send</button>
     </form>
   );

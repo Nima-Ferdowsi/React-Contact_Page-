@@ -86,7 +86,9 @@ form {
 #rfs-btn{
   background-color: white;
   margin-top: 0px;
-  position: relative;
+  position: absolute;
+  width: 18.4vw;
+  transform: translateX(4.6vw);
 }
   .comment {
       margin-left: 2vw;
@@ -121,17 +123,20 @@ form {
     position: absolute;
     left: 4vw;
     margin-top: 2.8vw;
-    @include displayflex(row);
+    @include displayflex(column);
     span {
       color: $primary;
     }
+    .privacy-items{
+@include displayflex(row)
+    }
   }
+
 }
 .info {
   position: fixed;
   margin-left: 15vw;
-  top: 40%;
-  transform: translateY(-40%);
+  top: 8vw;
 }
 .info h5 {
   font-size: 25px;
@@ -141,7 +146,7 @@ form {
   cursor: pointer;
   color: $primary;
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 300;
 }
 
 @media only screen and (max-width: 870px) {

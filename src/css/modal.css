@@ -6,7 +6,6 @@
   top: 0;
   left: 0;
   z-index: 1;
-  /* Sit on top */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,7 +19,7 @@
   opacity: 1 !important;
   background-color: white;
   border-radius: 5px;
-  animation: showModal .7s;
+  animation: showModal 0.7s;
   animation-fill-mode: forwards;
   overflow-y: auto;
   overflow-x: hidden;
@@ -33,7 +32,7 @@
   font-size: 20px;
   position: relative;
   border-radius: 45%;
-  right: -.2vw;
+  right: -0.2vw;
   top: 1vw;
   cursor: pointer;
 }
@@ -56,7 +55,4 @@
     top: 0;
   }
 }
-
-/* @media onl
- */
 /*# sourceMappingURL=modal.css.map */

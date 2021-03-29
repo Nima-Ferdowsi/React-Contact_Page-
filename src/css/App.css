@@ -88,7 +88,9 @@ form select {
 form #rfs-btn {
   background-color: white;
   margin-top: 0px;
-  position: relative;
+  position: absolute;
+  width: 18.4vw;
+  transform: translateX(4.6vw);
 }
 
 form .comment {
@@ -130,18 +132,22 @@ form .privacy {
   left: 4vw;
   margin-top: 2.8vw;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 
 form .privacy span {
   color: #de3c4b;
 }
 
+form .privacy .privacy-items {
+  display: flex;
+  flex-direction: row;
+}
+
 .info {
   position: fixed;
   margin-left: 15vw;
-  top: 40%;
-  transform: translateY(-40%);
+  top: 8vw;
 }
 
 .info h5 {
@@ -153,7 +159,7 @@ form .privacy span {
   cursor: pointer;
   color: #de3c4b;
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 300;
 }
 
 @media only screen and (max-width: 870px) {
